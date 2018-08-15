@@ -7,4 +7,11 @@ router.get('/', (req, res, next) => {
   })
 })
 
+router.post('/', (req, res, next) => {
+  res.send({
+    name: req.body.name,
+    message: req.body.message
+  })
+})
+
 module.exports = router
