@@ -14,6 +14,20 @@ describe('GET /', function() {
   })
 })
 
+describe('GET /about', function() {
+  it('Respond with object app name', function() {
+    return request(app)
+      .get('/about')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .then(response => {
+        expect(response.body.app).toBeDefined()
+        expect(response.body.app).toEqual('Code Test Server')
+      })
+  })
+})
+
 describe('POST / with request body name', function() {
   it('Respond with object name', function() {
     return request(app)

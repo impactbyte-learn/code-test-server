@@ -7,6 +7,12 @@ router.get('/', (req, res, next) => {
   })
 })
 
+router.get('/about', (req, res, next) => {
+  res.send({
+    app: 'Code Test Server'
+  })
+})
+
 router.post('/', (req, res, next) => {
   res.send({
     name: req.body.name,

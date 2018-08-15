@@ -11,7 +11,8 @@
     "start": "node src",
     "dev": "node-dev src",
     "mon": "nodemon src",
-    "test": "jest test"
+    "test": "jest test",
+    "test:watch": "jest test --watchAll"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
